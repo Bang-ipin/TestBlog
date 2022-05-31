@@ -11,4 +11,8 @@ class Post extends Model
     protected $table = 'post';
     protected $primaryKey = 'idpost';
     protected $guarded =[];
+
+    public function username(){
+        return $this->hasOne('App\User');
+    }
 }

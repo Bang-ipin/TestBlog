@@ -20,14 +20,26 @@
 						<div class="form-group">
 							<label class="col-md-2 control-label">Judul Artikel:<span class="text-danger">*</span></label>
 							<div class="col-md-10">
-								<input class="form-control" type="text" name="title" id="title" value="{{ $title }}">
+								<input class="form-control" type="text" name="title" id="title" value="{{ $title }}" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="col-md-2 control-label">Konten:<span class="text-danger">*</span></label>
 							<div class="col-md-10">
-								<textarea class="form-control" id="editor-ckeditor" type="text" name="content" data-error-container="#content">{{ $content }}</textarea>
+								<textarea class="form-control" id="editor-ckeditor" type="text" name="content" data-error-container="#content" required>{{ $content }}</textarea>
 								<div id="content"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Author:<span class="text-danger"></span></label>
+							<div class="col-md-10">
+								<select name="author" id="author" class="form-control form-control-solid select2" required>
+									@foreach ($dd_username as $key => $value)
+									<option value="{{ $key }}">
+										{{ $value }}
+									</option>
+									@endforeach
+								</select>
 							</div>
 						</div>
 						<div class="form-actions">
