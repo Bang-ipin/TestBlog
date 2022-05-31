@@ -60,7 +60,7 @@
 									{{ $item->username}}
 								</td>
 								<td>
-									<a href="{{ url('admin/articles/'.$item->id.'/edit') }}" class='btn btn-sm btn-info btn-clean btn-icon' title='Edit details' ><i class='la la-edit' ></i>Edit</a>
+									<a href="{{ url('admin/articles/'.$item->idpost.'/edit') }}" class='btn btn-sm btn-info btn-clean btn-icon' title='Edit details' ><i class='la la-edit' ></i>Edit</a>
 									<a href='javascript:;' class='btn btn-sm btn-danger btn-clean btn-icon' title='Delete' onclick='hapusid($item->id)'><i class='la la-trash' ></i>Hapus</a>
 								</td>
 							</tr>
